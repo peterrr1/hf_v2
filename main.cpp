@@ -1,31 +1,29 @@
 #include <iostream>
 #include "adatok.hpp"
 #include "lista.hpp"
+#include "filekezeles.hpp"
 
 
 int main() {
 
     Lista ll;
+    File ff;
 
+    ff.fileBeolvas(ll);
 
+    Adatok peti("Brezovcsik Peter", "Peti", "1028 Budapest", "brezop@gmail.com", "06205693212", "06204355322");
 
-    Adatok peti("Peter", "Peti", "Budapest", "brezo@gmail.com", "06704455332", "06204355322");
 
     ll.hozzafuz(peti);
 
+    ll.listaKiir();
 
 
-    Adatok vivi("Vivien", "Vivi", "Budapest", "vivien@gmail.com", "06203349982", "06709928832");
-
-    ll.hozzafuz(vivi);
+    ll.modosit("06204355322");
 
     ll.listaKiir();
 
-    Lista l2 = ll;
-
-    l2.listaKiir();
-
-
+    ff.fileKiiras(ll);
 
     return 0;
 }

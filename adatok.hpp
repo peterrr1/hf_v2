@@ -38,7 +38,7 @@ public:
     std::string getPrivSzam() const {
         return PrivSzam;
     }
-
+    
     void adatKiir() const {
         std::cout << Nev << '\n' << Becenev << '\n' << Lakcim <<
         '\n' << Email << '\n' << MunkSzam << '\n' << PrivSzam << '\n' << std::endl;
